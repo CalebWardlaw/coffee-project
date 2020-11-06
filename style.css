@@ -1,9 +1,37 @@
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+/*ID of H1 applied to parent container*/
+#h1 {
+    padding: 1em;
+    justify-content: center;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h2 {
+    padding-top: .5em;
+}
+
+h3  {
+    justify-content: left;
+}
+
+#list {
+    justify-content: left;
+
+}
+
+#coffees {
+    margin: 1em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*class created in main.js line 3*/
+.coffee {
+    width: 50%;
 }
