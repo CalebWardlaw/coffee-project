@@ -4,6 +4,12 @@
     justify-content: center;
 }
 
+.title-style{
+    color: white;
+    background: transparent;
+    z-index: 2;
+}
+
 h2 {
     padding-top: .5em;
 }
@@ -39,3 +45,28 @@ h3  {
 .coffee {
     width: 50%;
 }
+
+
+
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    background-color:black;
+    object-fit: cover;
+}
+.jumbotron video {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    /*  object-fit is not supported on IE  */
+    object-fit: cover;
+    opacity: 60%;
+}
+/*.jumbotron .container {*/
+/*    z-index: 2;*/
+/*    position: relative;*/
+/*}*/

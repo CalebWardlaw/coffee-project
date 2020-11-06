@@ -9,9 +9,22 @@
 <body>
 
 <!-- Start Container -->
+
+
+
+
 <div class="container" >
     <div class="row" id="h1">
-        <h1>Coffee!</h1>
+        <div class="jumbotron jumbotron-fluid col-12">
+            <div class="container">
+                <video autoplay muted loop poster="https://dummyimage.com/900x400/000/fff">
+                    <source src="img/Cup%20Of%20Coffee%20On%20Top%20Of%20Coffee%20Beans.mp4" type="video/mp4">
+                </video>
+                <div class="title-style">
+                    <h1 class="display-4 title text-center">COFFEE</h1>
+                </div>
+            </div>
+        </div>
     </div>
     <hr>
 <!--wrapping in row-->
@@ -30,11 +43,13 @@
             <h5>Roast</h5>
 
             <form>
-                <select id="roast-selection">
-                    <option>light</option>
-                    <option>medium</option>
-                    <option>dark</option>
-                </select>
+                <div class = "dropdown">
+                    <select class="form-control" id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
                 <input id="submit" type="submit" class="btn btn-primary"/>
             </form>
 
