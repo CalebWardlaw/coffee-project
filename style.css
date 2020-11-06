@@ -5,6 +5,7 @@
 }
 
 .title-style{
+    font-family: 'Hind', sans-serif;
     color: white;
     background: transparent;
     z-index: 2;
@@ -16,6 +17,14 @@ h2 {
 
 h3  {
     justify-content: left;
+}
+
+.dropdown {
+    padding-bottom: .5em;
+}
+
+.roast-input {
+    padding-bottom: .5em;
 }
 
 #list {
@@ -36,9 +45,19 @@ h3  {
 }
 
 .btn-primary {
+    font-family: 'Hind', sans-serif;
+    font-size: 18px;
+    background-color: #74391E;
+    border-color: black;
     width: 100%;
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+.btn-primary:hover {
+    border-color: #74391E;
+    background-color:white;
+    color: #74391E;
 }
 
 /*class created in main.js line 3*/
@@ -46,6 +65,9 @@ h3  {
     width: 50%;
 }
 
+.type-of-roast {
+    color:#74391E ;
+}
 
 
 
