@@ -2,7 +2,8 @@
 
 function renderCoffee(coffee){
     var html = '<div class="coffee">';
-    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<p class="type-of-roast">' + coffee.roast + '</p>' + '</div>';
+    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<p class="type-of-roast">' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
+    '</p>' + '</div>';
     html += '</div>'
     return html;
 }
@@ -26,19 +27,20 @@ function addCoffee () {
     tbody.innerHTML = renderCoffees(coffees);
 }
 
-
-
-
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
+    if(roastSelection.value === "all"){
+        filteredCoffees = coffees;
+    } else {
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    }
+        tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
 function updateCoffeesByInput(e) {
@@ -55,8 +57,6 @@ function updateCoffeesByInput(e) {
     tbody.innerHTML = renderCoffees(userCoffees);
 }
 
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -75,8 +75,6 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
-// var secondSubmitButton = document.querySelector('#user-input')
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeInput = document.querySelector('#coffee-input');
 var newCoffeeRoastInput = document.querySelector('#new-coffee-roast');
