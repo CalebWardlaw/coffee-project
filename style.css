@@ -2,7 +2,6 @@
 
 body {
     background-color: #CDDEC4;
-
 }
 
 #h1 {
@@ -75,14 +74,13 @@ h3  {
     color:#74391E ;
 }
 
-
-
 .jumbotron {
     position: relative;
     overflow: hidden;
     background-color:black;
     object-fit: cover;
 }
+
 .jumbotron video {
     position: absolute;
     z-index: 1;

@@ -34,16 +34,18 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-    // if(roastSelection.value === "all"){
-    //     tbody.innerHTML = renderCoffees(coffees);
-    // }
+    if(roastSelection.value === "all"){
+        filteredCoffees = coffees;
+    } else {
+        coffees.forEach(function (coffee) {
+            if (coffee.roast === selectedRoast) {
+                filteredCoffees.push(coffee);
+            }
+        });
+    }
+        tbody.innerHTML = renderCoffees(filteredCoffees);
 }
+
 
 function updateCoffeesByInput(e) {
     e.preventDefault();
