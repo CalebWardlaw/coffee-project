@@ -1,4 +1,10 @@
 /*ID of H1 applied to parent container*/
+
+body {
+    background-color: #CDDEC4;
+
+}
+
 #h1 {
     padding: 1em;
     justify-content: center;
@@ -92,3 +98,7 @@ h3  {
 /*    z-index: 2;*/
 /*    position: relative;*/
 /*}*/
+
+.icon {
+    color: #CFAA9A;
+}

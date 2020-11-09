@@ -2,7 +2,8 @@
 
 function renderCoffee(coffee){
     var html = '<div class="coffee">';
-    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<p class="type-of-roast">' + coffee.roast + '</p>' + '</div>';
+    html += '<div>' + '<h3>' + coffee.name + '</h3>' + " " + '<p class="type-of-roast">' + coffee.roast + ' <i class="icon fas fa-coffee">' + '</i>' +
+    '</p>' + '</div>';
     html += '</div>'
     return html;
 }
@@ -39,6 +40,9 @@ function updateCoffees(e) {
         }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+    // if(roastSelection.value === "all"){
+    //     tbody.innerHTML = renderCoffees(coffees);
+    // }
 }
 
 function updateCoffeesByInput(e) {
