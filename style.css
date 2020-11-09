@@ -77,6 +77,8 @@ h3  {
     overflow: hidden;
     background-color:black;
     object-fit: cover;
+    border: 4px solid white;
+    border-radius: 35px;
 }
 
 .jumbotron video {
