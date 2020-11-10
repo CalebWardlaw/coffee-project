@@ -1,5 +1,3 @@
-(function () {
-
 "use strict"
 
 function renderCoffee(coffee){
@@ -88,5 +86,3 @@ tbody.innerHTML = renderCoffees(coffees);
 roastSelection.addEventListener('input', updateCoffees);
 coffeeInput.addEventListener('input', updateCoffeesByInput);
 newCoffeeSubmitButton.addEventListener('click', addCoffee)
-
-})();
